@@ -1,0 +1,41 @@
+{id: [a-z1-9]+}
+   samples:
+      {id: drm2ys5u8wmvfuick9qtvluhk4x7zn8p}
+      {id: 2r882yvkqk2ta5dgp1k8ewye98djcfczeopwe1ozyu59qshqcxo7seoo2obbv6ggkwrzbqg14kkzsaiq9zin1vbpe451e3}
+      {id: okxdfmij9p8zymjcswpdc3oyi7d6bmnkcxtaeqdojaoyl}
+      {id: 7j926j4xhtufxcp6niqoaogqhzvdlo7ko}
+      {id: jn}
+      {id: r1b}
+      {id: qwts8tahi1hcstdxsnatl8}
+      {id: dq3179teicw7yacq9m2szxrdd2uw89u331qkyquf6rv6imwihwqi7gz2bypf28uwfdwshmah6vmbpze66h2zsihcnswlswsxie}
+      {id: enoszgcdja1ymyisd49m99tpdnagxyhpoizggc2r4pnlia6fggxhwci}
+      {id: k2z29zr28lx4myb6ewntnmjq7815ogyj5gy6945qzjrg8p3}
+
+
+What is the event that you must override to ensure that you only send an HTTP request to obtain JSON when the server is ready,
+and fie exists on the server?
+
+   a. serverreaday
+   b. xmlready
+   c. serverstate
+   d. onreadystatechange (answer)
+
+org.glassfish.jersey.test-gramework.providers
+org.glassfish.jersey-test-framework-provider-inmemory
+
+
+@Produces({"application/xml; qs=0.9", "application/json"})
+        application/json --> got more priority
+
+
+
+@POST
+@consumes("text/plain")
+public void f(string msg) {
+}
+
+response back to client:
+
+ 204 No Content
+The server has fulfilled the request but does not need to return an entity-body, and might want to return updated metainformation. The response MAY include new or updated metainformation in the form of entity-headers, which if present SHOULD be associated with the requested variant.
+

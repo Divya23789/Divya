@@ -1,0 +1,18 @@
+<html>
+<body>
+test..
+</body>
+<script>
+    class Hero {
+        Hero(role, program) {
+            this.role = role;
+            this.program = program;
+        }
+        speak() {
+            return "<p>Iam a "+this.role+",im in"+this.program+"</p>";
+        }
+    }
+    var villian = new Hero("Villain","movie");
+    alert(villian.speak());
+</script>
+</html>

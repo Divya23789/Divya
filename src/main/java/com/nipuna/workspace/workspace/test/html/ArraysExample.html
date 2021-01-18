@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+Loaded
+</body>
+<script>
+    var imgNames = ["x.gif", "y.gif", "z.gif"];
+    var images = [];
+    for(i=0; i< imgNames.length; i++) {
+        images[i] = new Image();
+        images[i].src = imgNames[i];
+    }
+    alert(images);
+</script>
+</html>

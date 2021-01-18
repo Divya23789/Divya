@@ -1,0 +1,12 @@
+<html>
+<body>
+hellow
+<div id="divBody"></div>
+</body>
+<script>
+    var obj = { name: "John", age: 30, city: "New York" };
+    var tttt = document.createElement("h1");
+    tttt.textContent = JSON.stringify( obj);
+    document.getElementById("divBody").appendChild(tttt);
+</script>
+</html>

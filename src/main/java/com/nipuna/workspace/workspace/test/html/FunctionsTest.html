@@ -1,0 +1,24 @@
+<html>
+<body>
+Body
+</body>
+<script>
+    function myFunc(x, doStuff) {
+        doStuff(x);
+    }
+
+    myFunc('a', function (x) {
+        myFunc(x + 't', function (x) {
+                var result = x + x;
+                myFunc(result + '2', function (x) {
+                    console.log(x + '!');
+                })
+            }
+        )
+    })
+
+    str = "apple apple";
+    str = str.replace(/apple/g, 'banana')
+    console.log(str);
+</script>
+</html>
